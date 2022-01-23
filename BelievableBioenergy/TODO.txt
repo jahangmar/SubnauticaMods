@@ -10,6 +10,8 @@
 -Add power consumption for containment [DONE]
     ->might need bigger power consumption because fishes breed fast [DONE]
     
+-Add more power consumption and crafting duration to fabricator in Lifepod to encourage building a new one and making powercells of lifepod weaker [DONE]
+
 Ideas:    
     -Maybe continous power drain instead of one time for planter [MAYBE]
     -Reduce lifepod energy

@@ -6,7 +6,8 @@ namespace BelievableBioenergy
 {
     class AlienContainment
     {
-        private const float energyPerSecond = 0.5f;
+        private const float powerDrainInterval = 2f;
+        private const float energyPerInterval = 1f;
 
         private static Dictionary<int, float> lastTime = new Dictionary<int, float>();
         
@@ -35,9 +36,9 @@ namespace BelievableBioenergy
                 
                 if (powerRelay != null && powerRelay.IsPowered())
                 {
-                    if (Time.time > GetLastTime(__instance.GetInstanceID()) + 1f)
+                    if (Time.time > GetLastTime(__instance.GetInstanceID()) + powerDrainInterval)
                     {
-                        powerRelay.ConsumeEnergy(energyPerSecond, out _);
+                        powerRelay.ConsumeEnergy(energyPerInterval, out _);
                         SetLastTime(__instance.GetInstanceID());
                     }
                 }

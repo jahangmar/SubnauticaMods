@@ -14,7 +14,6 @@ namespace BelievableBioenergy
             Assembly assembly = Assembly.GetExecutingAssembly();
             Harmony harmony = new Harmony(QModManager.API.QModServices.Main.GetMyMod().Id);
             harmony.PatchAll(assembly);
-            
         }        
     }
 }
