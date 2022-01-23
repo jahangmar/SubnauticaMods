@@ -1,0 +1,17 @@
+﻿TODO
+-Reduce power value of items by factor 10 [DONE]
+-Adjust/Exclude certain items as seatreader feces [DONE]
+
+-Add power consumption for planters
+	->special cases for certain indoor fruit types with multiple yields [DONE]
+    ->reduce power consumption of planters proportional to depth and light [DONE]
+    ->implement seed to fruit and set all values properly [DONE]
+
+-Add power consumption for containment [DONE]
+    ->might need bigger power consumption because fishes breed fast [DONE]
+    
+Ideas:    
+    -Maybe continous power drain instead of one time for planter [MAYBE]
+    -Reduce lifepod energy
+    
+	
