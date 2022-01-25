@@ -56,6 +56,8 @@
   <ItemGroup>
     <Compile Include="Bioreactor.cs" />
     <Compile Include="AlienContainment.cs" />
+    <Compile Include="Debug.cs" />
+    <Compile Include="SmartPower.cs" />
     <Compile Include="Fabricator.cs" />
     <Compile Include="ModPlantValues.cs" />
     <Compile Include="PlanterEnergy.cs" />

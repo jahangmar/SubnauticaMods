@@ -12,8 +12,9 @@
     
 -Add more power consumption and crafting duration to fabricator in Lifepod to encourage building a new one and making powercells of lifepod weaker [DONE]
 
+-Prioritize certain power sources (regenerative sources as solar and thermal first) [DONE]
+
 Ideas:    
     -Maybe continous power drain instead of one time for planter [MAYBE]
-    -Reduce lifepod energy
     
 	

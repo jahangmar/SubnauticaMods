@@ -40,7 +40,7 @@ namespace BelievableBioenergy
         },
         {
             TechType.SmallMelon,
-            8f
+            3f
         },
         {
             TechType.JellyPlant,
@@ -336,7 +336,7 @@ namespace BelievableBioenergy
         },
         {
             TechType.CreepvineSeedCluster,
-            7f
+            14f
         },
         {
             TechType.BloodOil,
