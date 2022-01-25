@@ -6,7 +6,7 @@ namespace BelievableBioenergy
     {
 
         private const float additionalEnergyToConsume = 5f;
-        private const float additionalEnergyToConsumeBeforeFixed = 20f;
+        private const float additionalEnergyToConsumeBeforeFixed = 10f;
         private const float durationFactor = 2f;
         private const float durationFactorBeforeFixed = 4f;
 

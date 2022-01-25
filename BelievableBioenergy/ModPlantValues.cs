@@ -32,7 +32,7 @@ namespace BelievableBioenergy
         },
         {
             TechType.PurpleVegetable,
-            6f
+            5f
         },
         {
             TechType.HangingFruit,
