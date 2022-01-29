@@ -15,7 +15,7 @@ namespace BelievableBioenergy
 
         static public float GetEnergyForPlanting(TechType seedTechType)
         {
-            float modCharge = Bioreactor.ModifiedGetCharge(ModPlantValues.GetFruit(seedTechType));
+            float modCharge = BaseBioReactor.GetCharge(ModPlantValues.GetFruit(seedTechType));
             if (seedTechType == TechType.PurpleVegetable)
                 return modCharge * ModPlantValues.purpleVegetableYield;
             if (seedTechType == TechType.HangingFruit)

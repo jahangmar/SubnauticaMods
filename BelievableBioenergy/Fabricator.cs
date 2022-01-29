@@ -10,6 +10,8 @@ namespace BelievableBioenergy
         private const float durationFactor = 2f;
         private const float durationFactorBeforeFixed = 4f;
 
+        public static bool FabricatorChangesActive;
+
         private static bool EscapePodBroken()
         {
             if (Player.main.currentEscapePod == null)
@@ -50,6 +52,9 @@ namespace BelievableBioenergy
             [HarmonyPrefix]
             public static bool Prefix(PowerRelay ___powerRelay)
             {
+                if (!FabricatorChangesActive)
+                    return true;
+
                 if (IsInEscapePod())
                 {
                     return CrafterLogic.ConsumeEnergy(___powerRelay, GetAdditionalEnergy());
@@ -66,6 +71,9 @@ namespace BelievableBioenergy
             [HarmonyPostfix]
             public static void Postfix(ref bool __result, PowerRelay ___powerRelay)
             {
+                if (!FabricatorChangesActive)
+                    return;
+
                 __result = __result && (!IsInEscapePod() || ___powerRelay.GetPower() >= 5f + GetAdditionalEnergy());
             }
         }
@@ -77,6 +85,9 @@ namespace BelievableBioenergy
             [HarmonyPrefix]
             public static bool Prefix(ref float duration)
             {
+                if (!FabricatorChangesActive)
+                    return true;
+
                 duration = IsInEscapePod() ? duration * GetDurationFactor() : duration;
                 return true;
             }

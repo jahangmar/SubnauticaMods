@@ -2,8 +2,9 @@
   "Id": "jahangmar_BelievableBioenergy",
   "DisplayName": "Believable Bioenergy",
   "Author": "jahangmar",
-  "Version": "1.0.0",
+  "Version": "1.0.1",
   "Enable": true,
   "AssemblyName": "BelievableBioenergy.dll",
-  "Game": "Subnautica"
+  "Game": "Subnautica",
+  "Dependencies": ["SMLHelper"]
 }

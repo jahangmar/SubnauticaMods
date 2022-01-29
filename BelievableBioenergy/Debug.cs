@@ -5,8 +5,7 @@ using System.Collections.Generic;
 namespace BelievableBioenergy
 {
     class Debug
-    {
-        //[HarmonyPatch(typeof(Player), "GetOxygenAvailable")]
+    {       
         internal class PlayerGetOxygenAvailable
         {
             static float time = 0f;

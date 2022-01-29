@@ -6,8 +6,9 @@ namespace BelievableBioenergy
 {
     class Bioreactor
     {
-        static public float MaxPlantCharge = BaseBioReactor.GetCharge(TechType.Melon);        
-        
+        static public float MaxPlantCharge = BaseBioReactor.GetCharge(TechType.Melon);
+
+        /*
         static public float ModifiedGetCharge(TechType techType)
         {
             return ModPlantValues.charge.GetOrDefault(techType, -1f);            
@@ -68,7 +69,7 @@ namespace BelievableBioenergy
                 return false;
             }
         }
-
+        
         [HarmonyPatch(typeof(BaseBioReactor))]
         [HarmonyPatch("OnAddItem")]
         internal class PatchBioReactorOnAddItem
@@ -76,14 +77,14 @@ namespace BelievableBioenergy
             [HarmonyPostfix]
             public static bool Prefix(InventoryItem item)
             {
-                if (item != null && item.item != null && ModifiedGetCharge(item.item.GetTechType()) > 0)
+                if (item != null && item.item != null && BaseBioReactor.GetCharge(item.item.GetTechType()) > 0)
                 {
-                    //ErrorMessage.AddMessage($"Added {System.Enum.GetName(typeof(TechType), item.item.GetTechType())} with a charge of {ModifiedGetCharge(item.item.GetTechType())}.");
+                    //ErrorMessage.AddMessage($"Added {System.Enum.GetName(typeof(TechType), item.item.GetTechType())} with a charge of {BaseBioReactor.GetCharge(item.item.GetTechType())}.");
                 }
 
                 return true;
             }
         }        
-
-    }        
+        */
+    }
 }

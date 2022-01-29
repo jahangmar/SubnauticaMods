@@ -12,6 +12,13 @@ namespace BelievableBioenergy
 
         public static TechType GetFruit(TechType seed) => seedToFruit.GetOrDefault(seed, seed);
 
+        public static void SetCharges(Dictionary<TechType, float> charge)
+        {
+            charge.Clear();
+            foreach (TechType tech in modcharge.Keys)
+                charge.Add(tech, modcharge[tech]);
+        }
+
         public static bool IsSeed(TechType techType)
         {
             string name = System.Enum.GetName(typeof(TechType), techType);                
@@ -24,7 +31,7 @@ namespace BelievableBioenergy
             {TechType.PinkMushroomSpore, TechType.PinkMushroom }
         };
 
-        public static readonly Dictionary<TechType, float> charge = new Dictionary<TechType, float>(TechTypeExtensions.sTechTypeComparer)
+        public static readonly Dictionary<TechType, float> modcharge = new Dictionary<TechType, float>(TechTypeExtensions.sTechTypeComparer)
     {
         {
             TechType.Melon,
